@@ -18,7 +18,3 @@ INSERT INTO `data_account` VALUES (1, `user1`, `pass1`, `user1@email.com`, `http
 INSERT INTO `data_account` VALUES (2, `user2`, `pass2`, `user2@email.com`, `https://i.imgur.com/YCkjigb.png`, 001122334455667788);
 INSERT INTO `data_account` VALUES (3, `user3`, `pass3`, `user3@email.com`, `https://i.pinimg.com/564x/e2/ed/ba/e2edbaaccf19f5a77748044163c6ec94.jpg`, 1234567890254678);
 commit;
-
-set autocommit=@old_autocommit;
-
-
