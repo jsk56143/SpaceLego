@@ -10,7 +10,7 @@ CREATE TABLE `product` (
 	`Size` char(1) NOT NULL DEFAULT '',
 	`Image` char(80) NOT NULL DEFAULT '',
 	`Theme` char(20) NOT NULL DEFAULT '',
-	PRIMARY KEY (`ID`),	
+	PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 set autocommit=0;
@@ -47,17 +47,4 @@ INSERT INTO `product` VALUES (30, 'Earth Defense HQ', 114.00, 'L', 'https://imag
 commit; 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SET autocommit=@old_autocommit;
