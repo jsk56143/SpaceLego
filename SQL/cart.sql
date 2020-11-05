@@ -10,6 +10,3 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 set autocommit=0;
-
-
-set autocommit=@old_autocommit;
