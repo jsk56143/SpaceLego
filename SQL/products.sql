@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS `product`;
 CREATE TABLE `product` (
 	`ID` int NOT NULL AUTO_INCREMENT,
 	`Name` char(60) NOT NULL DEFAULT '',
-	`Price` decimal(3,2) NOT NULL DEFAULT '0',
+	`Price` decimal(5,2) NOT NULL DEFAULT '0',
 	`Size` char(1) NOT NULL DEFAULT '',
 	`Image` char(80) NOT NULL DEFAULT '',
 	`Theme` char(20) NOT NULL DEFAULT '',
