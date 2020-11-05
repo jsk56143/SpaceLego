@@ -47,8 +47,6 @@ INSERT INTO `product` VALUES (30, 'Earth Defense HQ', 114.00, 'L', 'https://imag
 commit; 
 
 
-SET autocommit=@old_autocommit;
-
 
 
 
