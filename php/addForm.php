@@ -7,7 +7,7 @@
 ?>
 
 <head>
-	
+	<script src="../JS/addForm.js"></script>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
 			<label>Password:</label>
             <input class="textInput" type="text" name="Password"><br>
             <label>Email:</label>
-            <input class="textInput" type="text" name="Email"><br>
+            <input class="textInput" type="email" placeholder="Enter your email" name="Email"><br>
             <label>Image:</label>
             <input class="textInput" type="text" name="Image"><br>
             <label>Credit Card Number:</label>
