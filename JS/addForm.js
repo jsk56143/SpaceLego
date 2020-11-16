@@ -18,10 +18,10 @@ var checkCredentials = function() {
 		error2 = "Password must NOT be empty.";
 	}
 	if (email == "") {
-		error3 = "Email must NOT be empty."
+		error3 = "Email must NOT be empty.";
 	}	
 	if (isNan(creditcardno) || creditcardno == "" || creditcardno.length != 16) {
-		error4 = "Credit Card Number must be numeric, not empty, and have a length of 16 characters."
+		error4 = "Credit Card Number must be numeric, not empty, and have a length of 16 characters.";
 	}
 	if (username != "" && passwd != "" && email != "" && !isNan(creditcardno) && creditcardno != "" && creditcardno.length == 16) {
 		error1 = "";
