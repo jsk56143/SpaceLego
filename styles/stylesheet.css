@@ -1,18 +1,39 @@
+body {
+	background-image: url('../res/space/pic13.png');
+	max-width: 100%;
+	overflow-x: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	padding: 1em 1.5em 0;
+	margin-top: 0px;
+	border: 5px solid green;
+}
+
 body, head {
 	width: 1100px;
 	margin: auto;
 	background-color: #E3E3DE;
 }
 
-header {
-	margin: -24px;
-	margin-bottom: 1em;
-	background-image: linear-gradient(to bottom, #212022, #212022);
-	height: 150px;
+a {
+	color: steelblue;
+	font-weight: bold;
 }
 
-header img{
+ul {
+	line-height: 1.5;
+}
+
+header {
+	margin-left: -24px;
+	margin-right: -24px;	
+	height: 150px;
+	vertical-align: auto;
+}
+
+header #logo{
 	float: left;
+	margin-top: 5px;
 	margin-left: 50px;
 	margin-right: 2.5em;
 }
@@ -41,19 +62,22 @@ header h1{
 	margin-right: 5px;
 }
 
-#searchButton{
-	float: right;
-	margin-right: -550px;
-	width: 50px;
-	padding-top: 34px;
-}
-
 #searchbar {
-	float: right;
 	margin-right: 100px;
+	margin-top: 112.5px;
 	width: 500px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+#searchButton {
+	float: left;
+	margin-left: 500px;
+	margin-top: -40px;
+	margin-bottom: 20px;
+	width: 50px;
+	padding-top: 35px;
+	background-color: red; /*change color to image (optional) */
 }
 
 #cart {
@@ -73,20 +97,24 @@ header h1{
 }
 
 #nav_menu {
+	clear: both;
 	margin-left: -24px;
-	margin-top: -16px;
-	width: 1148px;
+	margin-top: -25px;
+	vertical-align: auto;
+	border: 1px solid yellow;
 }
 
 #nav_menu ul {
 	list-style: none;
 	position: relative;
 	padding: 0px;
-	background-color: #4F4D52;
 }
 
 #nav_menu ul li{
 	float: left;
+	margin-left: 40px;
+	width: 212px;
+	border: 1px solid orange;
 }
 
 #nav_menu ul ul {
@@ -104,7 +132,7 @@ header h1{
 	background-color: #4F4D52;
 	display: block;
 	width: 161.5px;
-	padding: 0.5em 9px;
+	padding: 0.5em 0px;
 	text-decoration: none;
 	color: white;
 	font-weight: bold;
@@ -129,78 +157,53 @@ header h1{
 	background-color: #787778;
 }
 
-body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 100%;
-	padding: 1em 1.5em 0;
+aside {
+	float: left;
+	width: 250px;
+	margin-top: -10px;
+	margin-right: 1.5em;
+	margin-left: -25px;
+	border: 5px solid red;
 }
 
-main, aside{
+aside h3 {
+	color: maroon;
+	font-size: 130%;
+	margin-bottom: -10px;
+}
+
+aside a {
+	text-decoration: none;
+}
+
+aside ul {
+	padding-left: 1em;
+}
+
+aside, main{
 	background-color: #E3E3DE;
+	margin-top: 50px;
 }
 
 main {
-	float: left;
+	float: right;
 	width: 565px;
 	height: 700px;
-}
-
-#cals {
-	float: left;
-	width: 565px;
-	height: 800px;
-}
-
-#planDiet {
-	float: left;
-	width: 565px;
-	height: 1100px;
+	border: 5px solid blue;
 }
 
 main h2, main h3{
 	line-height: .5em;
 }
 
-#leftColumn {
-	float: left;
-	width: 250px;
-	margin-top: -10px;
-	margin-right: 1.5em;
-	margin-left: -25px;
-}
-
-#leftColumn h3 {
-	color: maroon;
-	font-size: 130%;
-	margin-bottom: -10px;
-}
-
-#leftColumn a {
-	text-decoration: none;
-}
-
-#leftColumn ul{
-	padding-left: 1em;
-}
-
-#hot {
+main #hot {
 	color: maroon;
 	font-size: 130%;
 	margin-top: 18px;
 }
 
-a {
-	color: steelblue;
-	font-weight: bold;
-}
-
-ul {
-	line-height: 1.5;
-}
-
 footer {
 	clear: both;
-	background: #4F4D52;
 	padding: 1px 0 1px;
 	margin: 0px -25px 0px;
 }
@@ -210,34 +213,4 @@ footer p{
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	color: white;
-}
-
-thead tr {
-	color: maroon;
-	font-weight: bold;
-}
-
-td[rowspan] {
-	vertical-align: top;
-}
-
-tr td {
-	padding: .2em .8em;
-}
-
-#cc {
-	text-align: center;
-}
-
-.labels {
-	font-weight: bold;
-}
-
-.rightAlign {
-	text-align: right;
-}
-
-#note {
-	margin-left: 11px;
-	font-size: 90%;
 }
