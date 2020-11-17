@@ -61,8 +61,9 @@ header h1{
 }
 
 #searchbar {
+	float: right;
 	margin-left: 550px;
-	margin-top: 60px;
+	margin-top: -50px;
 	width: 500px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -70,7 +71,7 @@ header h1{
 }
 
 #searchButton {
-	float: left;
+	float: right;
 	margin-left: 1050px;
 	margin-top: -59px;
 	margin-bottom: 20px;
@@ -118,6 +119,7 @@ header h1{
 	display: none;
 	position: absolute;
 	top: 100%;
+	margin-left:-5em;
 }
 
 #nav_menu ul ul li {
@@ -199,6 +201,23 @@ main #hot {
 	margin-top: 18px;
 }
 
+#faqmain, #contactmain {
+	float:left;
+	width: 1100px;
+	height: 650px;
+	border: 5px solid blue;
+}
+
+#faqmain h2, #faqmain h3{
+	line-height: 1em;
+}
+
+#groupPicture {
+	float: right;
+	width: 600px;
+	height: 450px;
+	margin-left:
+}
 footer {
 	clear: both;
 	padding: 1px 0 1px;
