@@ -214,9 +214,16 @@ main #hot {
 
 #groupPicture {
 	float: right;
-	width: 600px;
-	height: 450px;
-	margin-left:
+	width: 200px;
+	height: 200px;
+	margin-right: 20px;
+}
+
+#groupPictureDuy {
+	float: right;
+	width: 200px;
+	height: 300px;
+	margin-right: 20px;
 }
 footer {
 	clear: both;
