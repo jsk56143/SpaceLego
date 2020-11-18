@@ -42,14 +42,11 @@
 
 	<main>
 		<h2>Add Account</h2>
-		<form action="addAccount.php" method="post">
+		<form name="accountCreationForm" action="../php/addAccount.php" method="post">
 			<label for="username" id="firstLabel">UserName:</label>
 			<input type="text" id="username" name="UserName" required><span id="error1">*</span><br>
 			<label for="passwd" id="secondLabel">Password:</label>
-			<input type="text" id="passwd" name="Password" required><span id="error2">*</span><br>
-			
-			
-			
+			<input type="text" id="passwd" name="Password" required><span id="error2">*</span><br>			
 			<label for="email" id="thirdLabel">Email:</label>
 			<input type="email" id="email" name="Email" placeholder="Enter your email" required><span id="error3">*</span><br>
             <label>Image:</label>

@@ -33,6 +33,7 @@ var checkCredentials = function() {
 		error2 = "";
 		error3 = "";
 		error4 = "";
+		document.accountCreationForm.submit();
 	}
 	
 	$("error1").firstChild.nodeValue = error1;
