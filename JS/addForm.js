@@ -4,31 +4,37 @@ var $ = function(id) {
 
 var checkCredentials = function() {
 	var username = $("username").value;
-	var passwd = $("password").value;
-	var email = $("email").value);
+	
+	var passwd = $("passwd").value;
+
+	var email = $("email").value;
+	
 	var creditcardno = parseInt($("creditcardno").value);
+	
 	var error1 = "*";
 	var error2 = "*";
 	var error3 = "*";
 	var error4 = "*";	
-	if (username == "") {
+	
+	if (username === "") {
 		error1 = "Username must NOT be empty.";
-	}	
-	if (passwd == "") {
+	}
+	if (passwd === "") {
 		error2 = "Password must NOT be empty.";
 	}
-	if (email == "") {
+	if (email === "") {
 		error3 = "Email must NOT be empty.";
 	}	
-	if (isNan(creditcardno) || creditcardno == "" || creditcardno.length != 16) {
+	if (isNaN(creditcardno) || creditcardno === "" || creditcardno.toString().length != 16) {
 		error4 = "Credit Card Number must be numeric, not empty, and have a length of 16 characters.";
 	}
-	if (username != "" && passwd != "" && email != "" && !isNan(creditcardno) && creditcardno != "" && creditcardno.length == 16) {
+	if (username != "" && passwd != "" && email != "" && !isNaN(creditcardno) && creditcardno != "" && creditcardno.toString().length == 16) {
 		error1 = "";
 		error2 = "";
 		error3 = "";
 		error4 = "";
 	}
+	
 	$("error1").firstChild.nodeValue = error1;
 	$("error2").firstChild.nodeValue = error2;
 	$("error3").firstChild.nodeValue = error3;
@@ -47,6 +53,6 @@ var clear = function() {
 }
 	
 window.onload = function() {
-	$("submitInput").onclick = checkCredentials;
-	$("clear").onclick = clear;
+	$("add").onclick = checkCredentials;
+	$("clearEntries").onclick = clear;
 }
