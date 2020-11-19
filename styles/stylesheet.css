@@ -33,7 +33,7 @@ header {
 
 header #logo{
 	float: left;
-	margin-top: 5px;
+	margin-top: -15px;
 	margin-left: 50px;
 	margin-right: 2.5em;
 }
@@ -62,8 +62,9 @@ header h1{
 
 #searchbar {
 	float: right;
-	margin-left: 550px;
-	margin-top: -50px;
+	margin-left: 500px;
+	margin-top: -90px;
+	margin-right: 114px;
 	width: 500px;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -72,8 +73,9 @@ header h1{
 
 #searchButton {
 	float: right;
-	margin-left: 1050px;
-	margin-top: -59px;
+	margin-left: 500px;
+	margin-right: 65px;
+	margin-top: -90px;
 	margin-bottom: 20px;
 	width: 50px;
 	padding-top: 35px;
