@@ -12,6 +12,5 @@
 		('$username', '$password', '$email', '$image', '$creditcardno')";
 	$db->exec($query);
 	
-
-
+	header('Location: index.php');
 ?>
