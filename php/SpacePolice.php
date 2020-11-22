@@ -21,12 +21,13 @@
 
 	<body>
 		<header> 
-			<a href="index.html"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
-			<a href="addForm.html"><span class="login"> Register </span> <span class="login"> | </span> <a href="loginForm.html"><span class="login"> Log in </span>
-			<span id="welcome"> Welcome! </span> 
-			<a href="Construction.html"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
-			<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
-			<button type="submit" id="searchButton">
+		<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
+		<a href="../html/addForm.html"><span class="login"> Register </span></a>
+		<a href="loginForm.php"><span class="login"> Log in | </span></a>
+		<span id="welcome"> Welcome! </span> 
+		<a href="../html/Construction.html"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
+		<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
+		<button type="submit" id="searchButton">
 		</header>
 
 		<nav id="nav_menu">
