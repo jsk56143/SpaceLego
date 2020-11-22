@@ -181,6 +181,34 @@ header h1{
 	text-align: center;
 }
 
+#prodNameSW {
+	margin-left: 10px;
+	margin-right: 571px;
+	font-size: 130%;
+	text-align: center;
+}
+
+#prodNameSP {
+	margin-left: 10px;
+	margin-right: 603px;
+	font-size: 130%;
+	text-align: center;
+}
+
+#prodNameGS {
+	margin-left: 10px;
+	margin-right: 617px;
+	font-size: 130%;
+	text-align: center;
+}
+
+#prodNameAC {
+	margin-left: 10px;
+	margin-right: 588px;
+	font-size: 130%;
+	text-align: center;
+}
+
 #priceLabel {
 	font-size: 140%;
 }
