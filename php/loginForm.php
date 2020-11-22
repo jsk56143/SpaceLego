@@ -26,11 +26,11 @@
 
 			<li><a href="#">SETS</a>
 				<ul>
-					<li><a href="../html/Construction.html">Space Police</a></li>
-					<li><a href="../html/Construction.html">Mars Mission</a></li>
-					<li><a href="../html/Construction.html">Galaxy Squad</a></li>
-					<li><a href="../html/Construction.html">Alien Conquest</a></li>
-					<li><a href="../html/Construction.html">Star Wars</a></li>
+					<li><a href="../html/SpacePolice.html">Space Police</a></li>
+					<li><a href="../html/MarsMission.html">Mars Mission</a></li>
+					<li><a href="../html/GalaxySquad.html">Galaxy Squad</a></li>
+					<li><a href="../html/AlienConquest.html">Alien Conquest</a></li>
+					<li><a href="../html/StarWars.html">Star Wars</a></li>
 				</ul>
 			</li>
 

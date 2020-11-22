@@ -25,11 +25,11 @@
 
 				<li><a href="#">SETS</a>
 					<ul>
-						<li><a href="../html/Construction.html">Space Police</a></li>
-						<li><a href="../html/Construction.html">Mars Mission</a></li>
-						<li><a href="../html/Construction.html">Galaxy Squad</a></li>
-						<li><a href="../html/Construction.html">Alien Conquest</a></li>
-						<li><a href="../html/Construction.html">Star Wars</a></li>
+						<li><a href="../html/SpacePolice.html">Space Police</a></li>
+						<li><a href="../html/MarsMission.html">Mars Mission</a></li>
+						<li><a href="../html/GalaxySquad.html">Galaxy Squad</a></li>
+						<li><a href="../html/AlienConquest.html">Alien Conquest</a></li>
+						<li><a href="../html/StarWars.html">Star Wars</a></li>
 					</ul>
 				</li>
 
@@ -63,11 +63,6 @@
 -->
 		<main>
 			<h2>What we offer</h2>
-			<img src="../res/logo/spacePolice_logo.jpg" width="600" height="100" alt="Space Police Logo"><br>
-			<img src="../res/logo/marsMission_logo.png" width="600" height="100" alt="Mars Mission Logo"><br>
-			<img src="../res/logo/galaxySquad_logo.png" width="600" height="100" alt="Galaxy Squad Logo"><br>
-			<img src="../res/logo/alienConquest_logo.jpg" width="600" height="100" alt="Alien Congquest Logo"><br>
-			<img src="../res/logo/starWars_logo.jpg" width="600" height="100" alt="Star Wars Logo"><br>
 		</main>
 		<footer> 
 			<p> &copy; 2020 Space Lego™ </p>
