@@ -25,11 +25,11 @@
 
 				<li><a href="#">SETS</a>
 					<ul>
-						<li><a href="../html/SpacePolice.html">Space Police</a></li>
-						<li><a href="../html/MarsMission.html">Mars Mission</a></li>
-						<li><a href="../html/GalaxySquad.html">Galaxy Squad</a></li>
-						<li><a href="../html/AlienConquest.html">Alien Conquest</a></li>
-						<li><a href="../html/StarWars.html">Star Wars</a></li>
+						<li><a href="SpacePolice.php">Space Police</a></li>
+						<li><a href="MarsMission.php">Mars Mission</a></li>
+						<li><a href="GalaxySquad.php">Galaxy Squad</a></li>
+						<li><a href="AlienConquest.php">Alien Conquest</a></li>
+						<li><a href="StarWars.php">Star Wars</a></li>
 					</ul>
 				</li>
 
@@ -39,28 +39,6 @@
 			</ul>
 		</nav>
 
-<!--
-		<aside id="leftColumn"> 
-			<h3> NEWEST RELEASES </h3>
-			<ul>
-				<a href=""><img src="../res/product1.jpg" alt="product1"> ITEM 1</a>
-				<a href=""><img src="../res/product2.jpg" alt="product2"> ITEM 2</a>
-				<a href=""><img src="../res/product3.jpg" alt="product3"> ITEM 3</a>
-			</ul>
-
-			<h3> BEST SELLERS </h3>
-			<ul>
-				<a href=""><img src="../res/product1.jpg" alt="product1"> ITEM 1</a>
-				<a href=""><img src="../res/product2.jpg" alt="product2"> ITEM 2</a>
-				<a href=""><img src="../res/product3.jpg" alt="product3"> ITEM 3</a>
-			</ul>
-		</aside>
-
-		<main>
-			<h3 id="hot"> WHAT'S HOT </h3>
-			<a href=""><img src="" alt="FRONT"></a>	
-		</main>
--->
 		<main>
 			<h1>Welcome to Space Lego!</h1>
 			<h3>Your one-stop shop for everything LEGO Space related</h3>
