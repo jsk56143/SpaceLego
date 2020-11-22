@@ -113,7 +113,6 @@ header h1{
 #nav_menu ul li{
 	float: left;
 	margin-left: 40px;
-	border: 1px solid orange;
 }
 
 #nav_menu ul ul {
