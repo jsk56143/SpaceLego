@@ -24,15 +24,15 @@
 		<ul>
 			<li><a href="index.php">HOME</a></li>
 
-			<li><a href="#">SETS</a>
-				<ul>
-					<li><a href="../html/SpacePolice.html">Space Police</a></li>
-					<li><a href="../html/MarsMission.html">Mars Mission</a></li>
-					<li><a href="../html/GalaxySquad.html">Galaxy Squad</a></li>
-					<li><a href="../html/AlienConquest.html">Alien Conquest</a></li>
-					<li><a href="../html/StarWars.html">Star Wars</a></li>
-				</ul>
-			</li>
+			<li><a href="allSets.php">SETS</a>
+					<ul>
+						<li><a href="SpacePolice.php">Space Police</a></li>
+						<li><a href="MarsMission.php">Mars Mission</a></li>
+						<li><a href="GalaxySquad.php">Galaxy Squad</a></li>
+						<li><a href="AlienConquest.php">Alien Conquest</a></li>
+						<li><a href="StarWars.php">Star Wars</a></li>
+					</ul>
+				</li>
 
 			<li><a href="../html/Construction.html">PREORDERS</a></li>
 			<li><a href="../html/faq.html">FAQ</a></li>
