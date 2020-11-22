@@ -62,7 +62,26 @@
 		</main>
 -->
 		<main>
-			<h2>What we offer</h2>
+		<main>
+			<h1>Welcome to Space Lego!</h1>
+			<h3>Your one-stop shop for everything LEGO Space related</h3>
+			<h2>Who are we</h2>
+			<blockquote>We are Space Lego, an ecommerce business specializing in Space Lego sets. Our business
+			was founded in November 1, 2020 with a goal of improving accessibility of purchasing old
+			Lego Space themed sets. Like many of you reading this, our childhood was mainly based on
+			Legos. However, many of these lego sets are no longer sold on official websites. As a result,
+			we took up the opportunity to help people like you buy these nostalgic lego sets. We currently
+			sell 5 different lego sets, which you can see in the "Sets" tab. If you have any questions, please
+			refer to the FAQ first before reaching out to us in the "Contact Us" tab. Enjoy!</blockquote>
+			
+			<h2>Free Merch - Space Lego HD Wallpapers</h2>
+			
+			<h2>Enjoy the Lego Space Mini Movie Part 1</h2>			
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Smgm5KPYN6Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<h2>Enjoy the Lego Space Mini Movie Part 2</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/vxlWH4sX0xs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+		</main>
 		</main>
 		<footer> 
 			<p> &copy; 2020 Space Lego™ </p>
