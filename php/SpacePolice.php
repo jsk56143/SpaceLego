@@ -2,7 +2,7 @@
 	require_once('accountDatabase.php');
 	
 	//get all products
-	$getAllProducts = 'SELECT * FROM product ORDER BY ID';
+	$getAllProducts = 'SELECT * FROM product WHERE Theme = "Space Police"';
 	$statement = $db->prepare($getAllProducts);
 	$statement->execute();
 	$allProducts = $statement->fetchAll();
@@ -32,6 +32,7 @@
 		<nav id="nav_menu">
 			<ul>
 				<li><a href="../php/index.php">HOME</a></li>
+
 				<li><a href="allSets.php">SETS</a>
 					<ul>
 						<li><a href="SpacePolice.php">Space Police</a></li>
@@ -59,7 +60,7 @@
 				<?php foreach ($allProducts as $product) : ?>
 				<tr>
 					<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-					<td> <a id="prodName" href="?id=<?php echo $product['ID']; ?>">
+					<td> <a id="prodNameSP" href="?id=<?php echo $product['ID']; ?>">
 							<?php echo $product['Name']; ?>
 						</a>
 					</td>
