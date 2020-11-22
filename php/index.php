@@ -23,7 +23,7 @@
 			<ul>
 				<li><a href="index.php" id="currentPage">HOME</a></li>
 
-				<li><a href="#">SETS</a>
+				<li><a href="allSets.php">SETS</a>
 					<ul>
 						<li><a href="SpacePolice.php">Space Police</a></li>
 						<li><a href="MarsMission.php">Mars Mission</a></li>
