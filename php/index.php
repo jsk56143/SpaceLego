@@ -5,7 +5,7 @@
 		<title>Space Lego Shop</title>
 		<link rel="shortcut icon" href="../res/favicon.ico">
 		<link rel="normal" href="../styles/normalize.css">
-		<link rel="stylesheet" href="../styles/stylesheet.css">
+		<link rel="stylesheet" href="../styles/stylesheet.css?v=<?php echo time();?>">
 	</head>
 
 	<body>
@@ -19,7 +19,7 @@
 		<button type="submit" id="searchButton">
 		</header>
 
-	<nav id="nav_menu">
+		<nav id="nav_menu">
 			<ul>
 				<li><a href="index.php" id="currentPage">HOME</a></li>
 
@@ -39,6 +39,7 @@
 			</ul>
 		</nav>
 
+<!--
 		<aside id="leftColumn"> 
 			<h3> NEWEST RELEASES </h3>
 			<ul>
@@ -59,7 +60,15 @@
 			<h3 id="hot"> WHAT'S HOT </h3>
 			<a href=""><img src="" alt="FRONT"></a>	
 		</main>
-
+-->
+		<main>
+			<h2>What we offer</h2>
+			<img src="../res/logo/spacePolice_logo.jpg" width="600" height="100" alt="Space Police Logo"><br>
+			<img src="../res/logo/marsMission_logo.png" width="600" height="100" alt="Mars Mission Logo"><br>
+			<img src="../res/logo/galaxySquad_logo.png" width="600" height="100" alt="Galaxy Squad Logo"><br>
+			<img src="../res/logo/alienConquest_logo.jpg" width="600" height="100" alt="Alien Congquest Logo"><br>
+			<img src="../res/logo/starWars_logo.jpg" width="600" height="100" alt="Star Wars Logo"><br>
+		</main>
 		<footer> 
 			<p> &copy; 2020 Space Lego™ </p>
 		</footer>
