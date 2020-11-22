@@ -62,7 +62,6 @@
 		</main>
 -->
 		<main>
-		<main>
 			<h1>Welcome to Space Lego!</h1>
 			<h3>Your one-stop shop for everything LEGO Space related</h3>
 			<h2>Who are we</h2>
@@ -81,7 +80,6 @@
 			<h2>Enjoy the Lego Space Mini Movie Part 2</h2>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/vxlWH4sX0xs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		
-		</main>
 		</main>
 		<footer> 
 			<p> &copy; 2020 Space Lego™ </p>

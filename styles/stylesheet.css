@@ -104,7 +104,6 @@ header h1{
 	margin-top: -25px;
 	margin-right: -24px;
 	vertical-align: auto;
-	border: 1px solid yellow;
 }
 
 #nav_menu ul {
@@ -115,7 +114,6 @@ header h1{
 #nav_menu ul li{
 	float: left;
 	margin-left: 40px;
-	border: 1px solid orange;
 }
 
 #nav_menu ul ul {
@@ -159,51 +157,6 @@ header h1{
 	background-color: #787778;
 }
 
-aside {
-	float: left;
-	width: 250px;
-	margin-top: -10px;
-	margin-right: 1.5em;
-	margin-left: -25px;
-	border: 5px solid red;
-}
-
-aside h3 {
-	color: maroon;
-	font-size: 130%;
-	margin-bottom: -10px;
-}
-
-aside a {
-	text-decoration: none;
-}
-
-aside ul {
-	padding-left: 1em;
-}
-
-aside, main{
-	background-color: #E3E3DE;
-	margin-top: 50px;
-}
-
-main {
-	float: right;
-	width: 565px;
-	height: 700px;
-	border: 5px solid blue;
-}
-
-main h2, main h3{
-	line-height: .5em;
-}
-
-main #hot {
-	color: maroon;
-	font-size: 130%;
-	margin-top: 18px;
-}
-
 #productList {
 	float: left;
 	height: 100%;
@@ -235,30 +188,66 @@ main #hot {
 #addCartButton{
 	padding: 5px;
 }
+
+main {
+	background: rgba(204, 204, 204, .7);
+}
+
+main h2 {
+	color: white;
+}
+
 #faqmain, #contactmain {
 	float:left;
 	width: 1100px;
-	height: 650px;
-	border: 5px solid blue;
+	height: 850px;
+}
+
+#faqmain li, #contactmain li {
+	color: black;
 }
 
 #faqmain h2, #faqmain h3{
 	line-height: 1em;
 }
 
-#groupPicture {
-	float: right;
+#groupPictureJosh {
+	float: left;
 	width: 200px;
 	height: 200px;
-	margin-right: 20px;
+	margin-left: 80px;
+	margin-top: 60px;
 }
 
 #groupPictureDuy {
+	float: left;
+	width: 200px;
+	height: 300px;
+	margin-left: 130px;
+}
+
+#groupPictureJason {
 	float: right;
 	width: 200px;
 	height: 300px;
-	margin-right: 20px;
+	margin-right: 95px;
 }
+
+#contact1 {
+	clear: both;
+	float: left;
+}
+
+#contact2 {
+	float: left;
+	margin-left: 60px;
+}
+
+#contact3 {
+	float: right;
+	margin-right: 60px;
+}
+
 footer {
 	clear: both;
 	padding: 1px 0 1px;
