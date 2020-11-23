@@ -71,7 +71,8 @@
 					</td>
 					<td> $<?php echo $product['Price']; ?> </td>
 					<td> <form action="addToCart.php" method="post">
-								<input id="addCartButton" type="submit" value="Add to Cart">
+							<input type="hidden" name="productID" value= <?php echo $product['ID'];?>>	
+							<input id="addCartButton" type="submit" value="Add to Cart">
 						</form>
 					</td>
 				</tr>		
