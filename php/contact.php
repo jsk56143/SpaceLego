@@ -1,14 +1,6 @@
-<?php 
-	require_once('accountDatabase.php');
+<?php
 	session_start();
-	//get all products
-	$getAllProducts = 'SELECT * FROM product WHERE Theme = "Galaxy Squad"';
-	$statement = $db->prepare($getAllProducts);
-	$statement->execute();
-	$allProducts = $statement->fetchAll();
-	$statement->closeCursor();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -34,10 +26,11 @@
 			<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
 			<button type="submit" id="searchButton">
 		</header>
-		
+
 		<nav id="nav_menu">
 			<ul>
 				<li><a href="index.php">HOME</a></li>
+
 				<li><a href="allSets.php">SETS</a>
 					<ul>
 						<li><a href="SpacePolice.php">Space Police</a></li>
@@ -50,35 +43,48 @@
 
 				<li><a href="../html/Construction.html">PREORDERS</a></li>
 				<li><a href="faq.php">FAQ</a></li>
-				<li><a href="contact.php">CONTACT US</a></li>
+				<li><a href="contact.php" id="currentPage">CONTACT US</a></li>
 			</ul>
 		</nav>
-
-		<main id="productList">
-			<table>
-				<tr>
-					<th id="productLabel"> Product </th>
-					<th></th>
-					<th id="priceLabel"> Price </th>
-					<th></th>
-				</tr>
-				<?php foreach ($allProducts as $product) : ?>
-				<tr>
-					<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-					<td> <a id="prodNameGS" href="?id=<?php echo $product['ID']; ?>">
-							<?php echo $product['Name']; ?>
-						</a>
-					</td>
-					<td> $<?php echo $product['Price']; ?> </td>
-					<td> <form action="addToCart.php" method="post">
-								<input id="addCartButton" type="submit" value="Add to Cart">
-						</form>
-					</td>
-				</tr>		
-				<?php endforeach; ?>
-			</table>
+		
+		<main id="contactmain">
+			<ul>
+				<h2>General</h2>
+				<ul>
+					<li>Phone: 123-456-7890</li>
+					<li>Email: spacelego@gmail.com</li>
+				</ul>
+					
+				<h2>Refunds</h2>
+				<ul>
+					<li>Phone: 098-765-4321</li>
+					<li>Email: spacelegoreturn@gmail.com</li>	
+				</ul>
+				<h2>Our Supreme Leaders</h2>
+				<img src="../res/josh.jpg" alt="photo" id="groupPictureJosh">
+				<img src="../res/duy.png" alt="photo" id="groupPictureDuy">
+				<img src="../res/jason.png" alt="photo" id="groupPictureJason">					
+				<ul>
+					<div id="contact1">
+						<h4>Chief Executive Officer: Josh Kim</h4>
+						<li>Phone: 049-386-4028</li>
+						<li>Email: joshk12@gmail.com</li>	
+					</div>
+			
+					<div id="contact2">
+						<h4>Chief Operating Officer: Duy Nguyen</h4>
+						<li>Phone: 222-222-2223</li>
+						<li>Email: dnguyen99@gmail.com</li>	
+					</div>
+					
+					<div id="contact3">
+						<h4>Chief Financial Officer: Jason Chang</h4>
+						<li>Phone: 101-010-1010</li>
+						<li>Email: jasonchang64@gmail.com</li>	
+					</div>
+				</ul>
+			</ul>
 		</main>
-
 		<footer> 
 			<p> &copy; 2020 Space Lego™ </p>
 		</footer>

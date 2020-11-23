@@ -1,23 +1,17 @@
-<?php 
-	require_once('accountDatabase.php');
+<?php
 	session_start();
-	//get all products
-	$getAllProducts = 'SELECT * FROM product WHERE Theme = "Galaxy Squad"';
-	$statement = $db->prepare($getAllProducts);
-	$statement->execute();
-	$allProducts = $statement->fetchAll();
-	$statement->closeCursor();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Space Lego Shop</title>
-		<link rel="shortcut icon" href="../res/favicon.ico">
-		<link rel="normal" href="../styles/normalize.css">
-		<link rel="stylesheet" href="../styles/stylesheet.css">
-	</head>
+
+<head>
+	<meta charset="utf-8">
+	<title>Space Lego Shop</title>
+	<link rel="shortcut icon" href="../res/favicon.ico">
+	<link rel="normal" href="../styles/normalize.css">
+	<link rel="stylesheet" href="../styles/stylesheet.css">	
+	<script type="text/javascript" src="../JS/addForm.js"></script>
+</head>
 
 	<body>
 		<header> 
@@ -54,33 +48,27 @@
 			</ul>
 		</nav>
 
-		<main id="productList">
-			<table>
-				<tr>
-					<th id="productLabel"> Product </th>
-					<th></th>
-					<th id="priceLabel"> Price </th>
-					<th></th>
-				</tr>
-				<?php foreach ($allProducts as $product) : ?>
-				<tr>
-					<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-					<td> <a id="prodNameGS" href="?id=<?php echo $product['ID']; ?>">
-							<?php echo $product['Name']; ?>
-						</a>
-					</td>
-					<td> $<?php echo $product['Price']; ?> </td>
-					<td> <form action="addToCart.php" method="post">
-								<input id="addCartButton" type="submit" value="Add to Cart">
-						</form>
-					</td>
-				</tr>		
-				<?php endforeach; ?>
-			</table>
-		</main>
+	<main>
+		<h2>Add Account</h2>
+		<form name="accountCreationForm" action="../php/addAccount.php" method="post">
+			<label for="username" id="firstLabel">UserName:</label>
+			<input type="text" id="username" name="UserName" required><span id="error1">*</span><br>
+			<label for="passwd" id="secondLabel">Password:</label>
+			<input type="text" id="passwd" name="Password" required><span id="error2">*</span><br>			
+			<label for="email" id="thirdLabel">Email:</label>
+			<input type="email" id="email" name="Email" placeholder="Enter your email" required><span id="error3">*</span><br>
+            <label for="creditcardno" id="fourthLabel">Credit Card Number:</label>
+            <input type="text" id="creditcardno" name="CreditCardNo" required><span id="error4">*</span><br>
+			<input id="add" type="button" value="Add Account">
+			<input type="button" id="clearEntries" value="Clear Entries">
+		</form><br>
+	</main>
+	
+	<footer>
+    	<p> &copy; 2020 Space Lego™ </p>
+	</footer>
+</body>
 
-		<footer> 
-			<p> &copy; 2020 Space Lego™ </p>
-		</footer>
-	</body>
 </html>
+
+

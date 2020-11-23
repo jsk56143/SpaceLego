@@ -1,9 +1,13 @@
 <?php 
 	require_once('accountDatabase.php');
-	session_start();
-	//get all products
-	$getAllProducts = 'SELECT * FROM product WHERE Theme = "Galaxy Squad"';
-	$statement = $db->prepare($getAllProducts);
+	session_start();	
+	if (!isset($_SESSION['id'])) {
+		header('Location: loginForm.php');
+	}	
+	$userID = $_SESSION['id'];
+	//get User's product
+	$getProducts = "SELECT * FROM cart INNER JOIN product ON cart.productID = product.ID WHERE UserID = '$userID' ORDER BY cart.ID";
+	$statement = $db->prepare($getProducts);
 	$statement->execute();
 	$allProducts = $statement->fetchAll();
 	$statement->closeCursor();
@@ -16,7 +20,7 @@
 		<title>Space Lego Shop</title>
 		<link rel="shortcut icon" href="../res/favicon.ico">
 		<link rel="normal" href="../styles/normalize.css">
-		<link rel="stylesheet" href="../styles/stylesheet.css">
+		<link rel="stylesheet" href="../styles/stylesheet.css?v=<?php echo time();?>">
 	</head>
 
 	<body>
@@ -53,8 +57,9 @@
 				<li><a href="contact.php">CONTACT US</a></li>
 			</ul>
 		</nav>
-
+		
 		<main id="productList">
+		<h1>My Cart</h1>
 			<table>
 				<tr>
 					<th id="productLabel"> Product </th>
@@ -65,20 +70,23 @@
 				<?php foreach ($allProducts as $product) : ?>
 				<tr>
 					<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-					<td> <a id="prodNameGS" href="?id=<?php echo $product['ID']; ?>">
+					<td> <a id="prodName" href="?id=<?php echo $product['ID']; ?>">
 							<?php echo $product['Name']; ?>
 						</a>
 					</td>
 					<td> $<?php echo $product['Price']; ?> </td>
-					<td> <form action="addToCart.php" method="post">
-								<input id="addCartButton" type="submit" value="Add to Cart">
-						</form>
-					</td>
 				</tr>		
 				<?php endforeach; ?>
 			</table>
+				<form action="purchased.php" method="post">						
+						<input type="submit" value="Submit">
+				</form>
+				<form action="clearCart.php" method="post">	
+						<input type="hidden" name="submitted" value="reset">
+						<input type="submit" value="Clear Cart">
+				</form>
 		</main>
-
+		
 		<footer> 
 			<p> &copy; 2020 Space Lego™ </p>
 		</footer>

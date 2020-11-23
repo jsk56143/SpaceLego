@@ -1,14 +1,22 @@
 <?php
 	include('accountDatabase.php');
-	//$username=(isset($_POST['UserName']) ? $_POST['UserName'] : '');
-	//$password=(isset($_POST['Password']) ? $_POST['Password'] : '');
+	session_start();
 	$username= $_POST['UserName'];
 	$password= $_POST['Password'];
-	
 	$query="SELECT * FROM account WHERE UserName='$username' AND Password='$password'";
     $accounts = $db->query($query);
-    
-    if ($accounts->rowCount() > 0) {
+ 
+	
+    if ($accounts->rowCount() > 0) {		
+		$getID = "SELECT * FROM account WHERE UserName='$username' AND Password='$password'";
+		$statement = $db->prepare($getID);
+		$statement->execute();
+		$UserID = $statement->fetch();
+		$id = $UserID['ID'];
+		$statement->closeCursor();
+		$_SESSION['id'] = $id;
+		$_SESSION['user'] = $username;
+		
 		header("Location: index.php");
     }
     else {

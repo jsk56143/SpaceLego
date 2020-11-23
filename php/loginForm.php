@@ -1,6 +1,8 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="utf-8">
 	<title>Space Lego Shop</title>
@@ -11,32 +13,31 @@
 </head>
 
 <body>
-	<header>
-		<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
-		<a href="../html/addForm.html"><span class="login"> Register </span> <span class="login"> | </span> <a href="loginForm.php"><span class="login"> Log in </span>
-		<span id="welcome"> Welcome!</span> 
-		<a href="../html/Construction.html"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
-		<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
-		<button type="submit" id="searchButton">
-	</header>
+		<header> 
+			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
+			<a href="addForm.php"><span class="login"> Register </span></a>		
+			<span id="welcome"> Welcome! </span>
+			<a href="cart_view.php"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
+			<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
+			<button type="submit" id="searchButton">
+		</header>
 	
 	<nav id="nav_menu">
 		<ul>
 			<li><a href="index.php">HOME</a></li>
-
 			<li><a href="allSets.php">SETS</a>
-					<ul>
-						<li><a href="SpacePolice.php">Space Police</a></li>
-						<li><a href="MarsMission.php">Mars Mission</a></li>
-						<li><a href="GalaxySquad.php">Galaxy Squad</a></li>
-						<li><a href="AlienConquest.php">Alien Conquest</a></li>
-						<li><a href="StarWars.php">Star Wars</a></li>
-					</ul>
-				</li>
+				<ul>
+					<li><a href="SpacePolice.php">Space Police</a></li>
+					<li><a href="MarsMission.php">Mars Mission</a></li>
+					<li><a href="GalaxySquad.php">Galaxy Squad</a></li>
+					<li><a href="AlienConquest.php">Alien Conquest</a></li>
+					<li><a href="StarWars.php">Star Wars</a></li>
+				</ul>
+			</li>
 
 			<li><a href="../html/Construction.html">PREORDERS</a></li>
-			<li><a href="../html/faq.html">FAQ</a></li>
-			<li><a href="../html/contact.html">CONTACT US</a></li>
+			<li><a href="faq.php">FAQ</a></li>
+			<li><a href="contact.php">CONTACT US</a></li>
 		</ul>
 	</nav>
 
