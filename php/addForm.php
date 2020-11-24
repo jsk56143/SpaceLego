@@ -16,17 +16,9 @@
 	<body>
 		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
-			<a href="addForm.php"><span class="login"> Register </span></a>
-			<?php if (isset($_SESSION['user'])) { ?>
-			<a href="logout.php"><span class="login"> Log out | </span></a>		
-			<span id="welcome"> <?php echo $_SESSION['user'];?> </span> 
-			<?php } else { ?>
-				<a href="loginForm.php"><span class="login"> Log in | </span></a>		
-				<span id="welcome"> Welcome! </span>
-			<?php } ?>
+			<a href="loginForm.php"><span class="login"> Log In </span></a>		
+			<span id="welcome"> Welcome! </span>
 			<a href="cart_view.php"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
-			<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
-			<button type="submit" id="searchButton">
 		</header>
 		
 		<nav id="nav_menu">
@@ -50,7 +42,7 @@
 
 	<main>
 		<h2>Add Account</h2>
-		<form name="accountCreationForm" action="../php/addAccount.php" method="post">
+		<form name="accountCreationForm" action="addAccount.php" method="post">
 			<label for="username" id="firstLabel">UserName:</label>
 			<input type="text" id="username" name="UserName" required><span id="error1">*</span><br>
 			<label for="passwd" id="secondLabel">Password:</label>
@@ -62,7 +54,7 @@
 			<label for="creditcardamount" id="fifthLabel">Amount in Card: </label>
 			<input type="text" id="creditcardamount" name="Amount" required><span id="error5">*</span><br>
 			<input id="add" type="button" value="Add Account">
-			<input type="button" id="clearEntries" value="Clear Entries">
+			<input type="reset" id="clearEntries" value="Clear Entries">
 		</form><br>
 	</main>
 	

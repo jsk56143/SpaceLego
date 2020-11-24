@@ -14,17 +14,15 @@
 	<body>
 		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
-			<a href="addForm.php"><span class="login"> Register </span></a>
 			<?php if (isset($_SESSION['user'])) { ?>
-			<a href="logout.php"><span class="login"> Log out | </span></a>		
+			<a href="logout.php"><span class="login"> Log out </span></a>		
 			<span id="welcome"> <?php echo $_SESSION['user'];?> </span> 
 			<?php } else { ?>
+				<a href="addForm.php"><span class="login"> Register </span></a>
 				<a href="loginForm.php"><span class="login"> Log in | </span></a>		
 				<span id="welcome"> Welcome! </span>
 			<?php } ?>
 			<a href="cart_view.php"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
-			<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
-			<button type="submit" id="searchButton">
 		</header>
 
 		<nav id="nav_menu">
@@ -41,7 +39,7 @@
 					</ul>
 				</li>
 
-				<li><a href="../html/Construction.html">PREORDERS</a></li>
+				<li><a href="accountPage.php">MY ACCOUNT</a></li>
 				<li><a href="faq.php">FAQ</a></li>
 				<li><a href="contact.php">CONTACT US</a></li>
 			</ul>

@@ -1,5 +1,7 @@
 <?php
-	session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,34 +14,33 @@
 	<script type="text/javascript" src="../JS/loginForm.js"></script>
 </head>
 
-<body>
+	<body>
 		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
 			<a href="addForm.php"><span class="login"> Register </span></a>		
 			<span id="welcome"> Welcome! </span>
 			<a href="cart_view.php"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
-			<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
-			<button type="submit" id="searchButton">
 		</header>
-	
-	<nav id="nav_menu">
-		<ul>
-			<li><a href="index.php">HOME</a></li>
-			<li><a href="allSets.php">SETS</a>
-				<ul>
-					<li><a href="SpacePolice.php">Space Police</a></li>
-					<li><a href="MarsMission.php">Mars Mission</a></li>
-					<li><a href="GalaxySquad.php">Galaxy Squad</a></li>
-					<li><a href="AlienConquest.php">Alien Conquest</a></li>
-					<li><a href="StarWars.php">Star Wars</a></li>
-				</ul>
-			</li>
 
-			<li><a href="../html/Construction.html">PREORDERS</a></li>
-			<li><a href="faq.php">FAQ</a></li>
-			<li><a href="contact.php">CONTACT US</a></li>
-		</ul>
-	</nav>
+		<nav id="nav_menu">
+			<ul>
+				<li><a href="index.php">HOME</a></li>
+
+				<li><a href="allSets.php">SETS</a>
+					<ul>
+						<li><a href="SpacePolice.php">Space Police</a></li>
+						<li><a href="MarsMission.php">Mars Mission</a></li>
+						<li><a href="GalaxySquad.php">Galaxy Squad</a></li>
+						<li><a href="AlienConquest.php">Alien Conquest</a></li>
+						<li><a href="StarWars.php">Star Wars</a></li>
+					</ul>
+				</li>
+
+				<li><a href="accountPage.php">MY ACCOUNT</a></li>
+				<li><a href="faq.php">FAQ</a></li>
+				<li><a href="contact.php">CONTACT US</a></li>
+			</ul>
+		</nav>
 
 	<main>
 		<h2>Login</h2>

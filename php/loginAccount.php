@@ -5,7 +5,6 @@
 	$password= $_POST['Password'];
 	$query="SELECT * FROM account WHERE UserName='$username' AND Password='$password'";
     $accounts = $db->query($query);
- 
 	
     if ($accounts->rowCount() > 0) {		
 		$getID = "SELECT * FROM account WHERE UserName='$username' AND Password='$password'";
@@ -16,7 +15,7 @@
 		$statement->closeCursor();
 		$_SESSION['id'] = $id;
 		$_SESSION['user'] = $username;
-		
+	
 		header("Location: index.php");
     }
     else {

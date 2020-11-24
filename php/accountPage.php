@@ -1,14 +1,19 @@
-<?php 
+<?php
 	require_once('accountDatabase.php');
-	session_start();	
-	//get all products
-	$getAllProducts = 'SELECT * FROM product WHERE Theme = "Space Police"';
-	$statement = $db->prepare($getAllProducts);
+	session_start();
+	if (!isset($_SESSION['id'])) {
+		header('Location: loginForm.php');
+	}
+	$userID = $_SESSION['id'];
+	$getInfo = "SELECT * FROM account WHERE ID = '$userID'";
+	$statement = $db->prepare($getInfo);
 	$statement->execute();
-	$allProducts = $statement->fetchAll();
-	$statement->closeCursor();
-?>
+	$account = $statement->fetch();
+	$cardNumber = $account['CreditCardNo'];
+	$amount = $account['Amount'];
+	$statement->closeCursor();	
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -16,7 +21,7 @@
 		<title>Space Lego Shop</title>
 		<link rel="shortcut icon" href="../res/favicon.ico">
 		<link rel="normal" href="../styles/normalize.css">
-		<link rel="stylesheet" href="../styles/stylesheet.css">
+		<link rel="stylesheet" href="../styles/stylesheet.css?v=<?php echo time();?>">
 	</head>
 
 	<body>
@@ -37,7 +42,7 @@
 			<ul>
 				<li><a href="index.php">HOME</a></li>
 
-				<li><a href="allSets.php" id="currentPage">SETS</a>
+				<li><a href="allSets.php">SETS</a>
 					<ul>
 						<li><a href="SpacePolice.php">Space Police</a></li>
 						<li><a href="MarsMission.php">Mars Mission</a></li>
@@ -47,38 +52,20 @@
 					</ul>
 				</li>
 
-				<li><a href="accountPage.php">MY ACCOUNT</a></li>
+				<li><a href="accountPage.php" id="currentPage">MY ACCOUNT</a></li>
 				<li><a href="faq.php">FAQ</a></li>
 				<li><a href="contact.php">CONTACT US</a></li>
 			</ul>
 		</nav>
 
-		<main id="productList">
-			<table>
-				<tr>
-					<th id="productLabel"> Product </th>
-					<th></th>
-					<th id="priceLabel"> Price </th>
-					<th></th>
-				</tr>
-				<?php foreach ($allProducts as $product) : ?>
-				<tr>
-					<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-					<td> <a id="prodNameSP" href="?id=<?php echo $product['ID']; ?>">
-							<?php echo $product['Name']; ?>
-						</a>
-					</td>
-					<td> $<?php echo $product['Price']; ?> </td>
-					<td> <form action="addToCart.php" method="post">
-							<input type="hidden" name="productID" value= <?php echo $product['ID'];?>>	
-							<input id="addCartButton" type="submit" value="Add to Cart">
-						</form>
-					</td>
-				</tr>		
-				<?php endforeach; ?>
-			</table>
+		<main id="faqmain">
+			<h1>Username:</h1>
+			<h2> <?php echo $_SESSION['user'];?></h2>
+			<h1>Your Credit Card Number:</h1>
+			<h2> <?php echo $cardNumber;?></h2>
+			<h1>Your amount:</h1>
+			<h2>$<?php echo $amount;?></h2>
 		</main>
-
 		<footer> 
 			<p> &copy; 2020 Space Lego™ </p>
 		</footer>
