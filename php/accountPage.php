@@ -69,9 +69,9 @@
 			<h1 class="accounth1">Add Funds:</h1>
 			<form name="addFundForm" action='addFunds.php' method="post">				
 				<label for="username" id="accountLabel1">UserName:</label>
-				<input type="text" id="username" name="addUserInput"><span id="error1">*</span><br>
+				<input type="text" id="username" name="addUserInput"><span id="error1"> * </span><br>
 				<label for="fund" id="accountLabel2">Amount of Fund to Add:</label>
-				<input type="text" id="fund" name="addFundInput"><span id="error2">*</span><br>
+				<input type="text" id="fund" name="addFundInput"><span id="error2"> * </span><br>
 				<input type="button" id="addFundButton" name="addFundButton" value="Add Funds">
 			</form>
 		</main>
