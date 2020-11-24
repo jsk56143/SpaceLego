@@ -321,6 +321,7 @@ footer p{
 }
 
 #Cart_TotalText {
+	color: red;
 	font-size: 130%;
 	font-weight: bold;
 	text-align: center;
@@ -328,6 +329,7 @@ footer p{
 }
 
 #Cart_TotalValue {
+	color: red;
 	font-size: 130%;
 	font-weight: bold;
 	text-align: center;
