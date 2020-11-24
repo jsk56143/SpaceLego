@@ -100,15 +100,14 @@
 						<td style="text-align: right"> <b> $<?php echo $product['Price']; ?> <b> </td>
 					</tr>		
 					<?php endforeach; ?>
-				</tbody>
-				
+				</tbody>		
 			</table>
 			<h2 id="Cart_AccText">Account Amount: <span id="Cart_AccValue"> $<?php echo $amount; ?> </span> </h2> 
 			<?php foreach ($total as $totals) : ?>
 				<h2 id="Cart_TotalText">Total: <span id="Cart_TotalValue"> $<?php echo $totals['Sum']; ?> </span> </h2>
 			<?php endforeach; ?>
 			<form action="checkBalance.php" method="post">						
-					<input type="submit" class="checkoutButton" value="Checkout"> 
+				<input type="submit" class="checkoutButton" value="Checkout"> 
 			</form>
 			<form action="clearCart.php" method="post">	
 					<input type="hidden" name="submitted" value="reset">
