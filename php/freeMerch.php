@@ -23,9 +23,7 @@
 				<a href="loginForm.php"><span class="login"> Log in | </span></a>		
 				<span id="welcome"> Welcome! </span>
 			<?php } ?>
-			<a href="cart_view.php"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
-			<input type="search" id ="searchbar" name="searchbar" placeholder="Enter your search here... ">
-			<button type="submit" id="searchButton">
+			<a href="cart_view.php"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li>
 		</header>
 		
 		<nav id="nav_menu">
