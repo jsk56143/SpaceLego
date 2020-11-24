@@ -335,3 +335,8 @@ footer p{
 	text-align: center;
 	margin-left: 1500px;
 }
+
+#freeMerchTable {
+	margin-left: auto;
+	margin-right: auto;
+}
