@@ -17,7 +17,7 @@
 	<body>
 		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
-			<a href="addForm.php"><span class="login"> Register </span></a>		
+			<a href="addForm.php"><span id="logLogin"> Register </span></a>		
 			<span id="welcome"> Welcome! </span>
 			<a href="cart_view.php"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
 		</header>
