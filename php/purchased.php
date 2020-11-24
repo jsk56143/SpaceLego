@@ -11,11 +11,12 @@
 	<body>
 	
 		<main>
-			<h1>THANK YOU FOR BUYING OUR PRODUCTS! WE HOPE YOU BUY MORE!</h1>
-				<form action="clearCart.php" method="post">
-					<input type="hidden" name="submitted" value="exit">
-					<input type="submit" value="Return to Main Page">
-				</form>
+			<h1 class="centerText">THANK YOU FOR BUYING OUR PRODUCTS! <br> WE HOPE YOU COME AGAIN!</h1>
+			<img id="purchaseImg" src="../res/sunglasses_lego.png">
+			<form action="clearCart.php" method="post">
+				<input type="hidden" name="submitted" value="exit">
+				<input type="submit" id="indexButton" value="Return to Main Page">
+			</form>
 		</main>
 		
 		<footer> 
