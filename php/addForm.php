@@ -42,7 +42,7 @@
 					</ul>
 				</li>
 
-				<li><a href="../html/Construction.html">PREORDERS</a></li>
+				<li><a href="accountPage.php">MY ACCOUNT</a></li>
 				<li><a href="faq.php">FAQ</a></li>
 				<li><a href="contact.php">CONTACT US</a></li>
 			</ul>
@@ -59,6 +59,8 @@
 			<input type="email" id="email" name="Email" placeholder="Enter your email" required><span id="error3">*</span><br>
             <label for="creditcardno" id="fourthLabel">Credit Card Number:</label>
             <input type="text" id="creditcardno" name="CreditCardNo" required><span id="error4">*</span><br>
+			<label for="creditcardamount" id="fifthLabel">Amount in Card: </label>
+			<input type="text" id="creditcardamount" name="Amount" required><span id="error5">*</span><br>
 			<input id="add" type="button" value="Add Account">
 			<input type="button" id="clearEntries" value="Clear Entries">
 		</form><br>
@@ -70,5 +72,3 @@
 </body>
 
 </html>
-
-
