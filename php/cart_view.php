@@ -42,8 +42,8 @@
 		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
 			<?php if (isset($_SESSION['user'])) { ?>
-			<a href="logout.php"><span class="login"> Log out </span></a>		
-			<span id="welcome"> <?php echo $_SESSION['user'];?> </span> 
+			<a href="logout.php"><span class="logged"> Log out </span></a>		
+			<span id="welcome"> Welcome, <?php echo $_SESSION['user'];?>! </span> 
 			<?php } else { ?>
 				<a href="addForm.php"><span class="login"> Register </span></a>
 				<a href="loginForm.php"><span class="login"> Log in | </span></a>		
@@ -72,11 +72,12 @@
 		</nav>
 		
 		<main id="productList">
-		<h1>My Cart</h1>
+		<h1 style="text-align: center">My Cart</h1>
 			<table>
 				<thead>
 					<tr>
 						<th id="productLabel"> Product </th>
+						<th></th>
 						<th></th>
 						<th id="priceLabel"> Price </th>
 						<th></th>
@@ -86,48 +87,36 @@
 					<?php foreach ($allProducts as $product) : ?>
 					<tr>
 						<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-						<td> <a id="prodName" href="?id=<?php echo $product['ID']; ?>">
+						<td> <a id="prodNameCart" href="?id=<?php echo $product['ID']; ?>">
 								<?php echo $product['Name']; ?>
 							</a>
 						</td>
-						<td> <?php echo $product['Price']; ?> </td>
 						<td>
-							<form action='removeItem.php' method="post">
+							<form action='removeItem.php' id="removeItemButton" method="post">
 								<input type="hidden" name="hiddenRemoveItem" value="<?php echo $product['ID']; ?>">
 								<input type="submit" name="submit" value="Remove item">
 							</form>
 						</td>
+						<td style="text-align: right"> <b> $<?php echo $product['Price']; ?> <b> </td>
 					</tr>		
 					<?php endforeach; ?>
 				</tbody>
-				<tfoot>
-					<tr>
-						<td id="Cart_TotalText">Account Amount</td>
-						<td id="Cart_TotalValue">
-							<?php echo $amount; ?>
-						</td>
-					</tr>
-					<?php foreach ($total as $totals) : ?>
-					<tr>
-						<td id="Cart_TotalText">Total</td>
-						<td id="Cart_TotalValue">
-							<?php echo $totals['Sum']; ?>
-						</td>
-					</tr>
-					<?php endforeach; ?>
-				</tfoot>
+				
 			</table>
-				<form action="checkBalance.php" method="post">						
-						<input type="submit" value="Checkout">
-				</form>
-				<form action="clearCart.php" method="post">	
-						<input type="hidden" name="submitted" value="reset">
-						<input type="submit" value="Clear Cart">
-				</form>
-				<p id="Cart_TotalValue"> <?php if (!empty($lowFunds)) { ?>
-					<p><?php echo htmlspecialchars($lowFunds);?></p>
-				<?php } ?>
-				</p>
+			<h2 id="Cart_AccText">Account Amount: <span id="Cart_AccValue"> $<?php echo $amount; ?> </span> </h2> 
+			<?php foreach ($total as $totals) : ?>
+				<h2 id="Cart_TotalText">Total: <span id="Cart_TotalValue"> $<?php echo $totals['Sum']; ?> </span> </h2>
+			<?php endforeach; ?>
+			<form action="checkBalance.php" method="post">						
+					<input type="submit" class="checkoutButton" value="Checkout"> 
+			</form>
+			<form action="clearCart.php" method="post">	
+					<input type="hidden" name="submitted" value="reset">
+					<input type="submit" class="clearCartButton" value="Clear Cart">
+			</form>
+			<p id="Cart_TotalValue"> <?php if (!empty($lowFunds)) { ?>
+				<p><?php echo htmlspecialchars($lowFunds);?></p> <?php } ?>
+			</p>
 		</main>
 		
 		<footer> 
