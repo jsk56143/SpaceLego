@@ -20,7 +20,7 @@
 	</head>
 
 	<body>
-		<header> 
+		<header>
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
 			<?php if (isset($_SESSION['user'])) { ?>
 			<a href="logout.php"><span class="login"> Log out </span></a>		
@@ -63,8 +63,8 @@
 				</tr>
 				<?php foreach ($allProducts as $product) : ?>
 				<tr>
-					<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-					<td> <a id="prodName" href="?id=<?php echo $product['ID']; ?>">
+					<td> <a href="imageview.php?link=<?php echo $product['Image'];?>"><img class="productImg" src="<?php echo $product['Image']; ?>"></a> </td>
+					<td> <a id="prodName" href="imageview.php?link=<?php echo $product['Image'];?>">
 							<?php echo $product['Name']; ?>
 						</a>
 					</td>

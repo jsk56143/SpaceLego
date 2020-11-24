@@ -63,15 +63,15 @@
 				</tr>
 				<?php foreach ($allProducts as $product) : ?>
 				<tr>
-					<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-					<td> <a id="prodNameGS" href="?id=<?php echo $product['ID']; ?>">
+					<td> <a href="imageview.php?link=<?php echo $product['Image'];?>"><img class="productImg" src="<?php echo $product['Image']; ?>"></a> </td>
+					<td> <a id="prodNameGS" href="imageview.php?link=<?php echo $product['Image'];?>">
 							<?php echo $product['Name']; ?>
 						</a>
 					</td>
 					<td> $<?php echo $product['Price']; ?> </td>
 					<td> <form action="addToCart.php" method="post">
-							<input type="hidden" name="productID" value= <?php echo $product['ID'];?>>	
-							<input id="addCartButton" type="submit" value="Add to Cart">
+								<input type="hidden" name="productID" value= <?php echo $product['ID'];?>>								
+								<input id="addCartButton" type="submit" value="Add to Cart">
 						</form>
 					</td>
 				</tr>		
