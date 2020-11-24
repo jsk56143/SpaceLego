@@ -45,7 +45,7 @@
 	<main>
 		<h2 id="loginText">Login</h2>
 		<?php if (!empty($status)) { ?>
-			<p><?php echo htmlspecialchars($status);?></p>
+			<b> <p style="margin-left: 25px"><?php echo htmlspecialchars($status);?></p> <b>
 		<?php } ?>
 		<form name="loginForm" action="loginAccount.php" method="post">
 			<label for="username" id="loginLabel1">UserName:</label>
