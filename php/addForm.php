@@ -16,7 +16,7 @@
 	<body>
 		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
-			<a href="loginForm.php"><span class="login"> Log In </span></a>		
+			<a href="loginForm.php"><span id="regLogin"> Log in </span></a>		
 			<span id="welcome"> Welcome! </span>
 			<a href="cart_view.php"><img src="../res/shopping_cart.png" id="cart"><span id="cartText">MY CART</span></a></li> 
 		</header>
@@ -41,20 +41,20 @@
 		</nav>
 
 	<main>
-		<h2>Add Account</h2>
+		<h2 id="loginText">Add Account</h2>
 		<form name="accountCreationForm" action="addAccount.php" method="post">
 			<label for="username" id="firstLabel">UserName:</label>
-			<input type="text" id="username" name="UserName" required><span id="error1">*</span><br>
+			<input type="text" id="username" name="UserName" required><span id="error1"> * </span><br>
 			<label for="passwd" id="secondLabel">Password:</label>
-			<input type="text" id="passwd" name="Password" required><span id="error2">*</span><br>			
+			<input type="text" id="passwd" name="Password" required><span id="error2"> * </span><br>			
 			<label for="email" id="thirdLabel">Email:</label>
-			<input type="email" id="email" name="Email" placeholder="Enter your email" required><span id="error3">*</span><br>
+			<input type="email" id="email" name="Email" placeholder="Enter your email" required><span id="error3"> * </span><br>
             <label for="creditcardno" id="fourthLabel">Credit Card Number:</label>
-            <input type="text" id="creditcardno" name="CreditCardNo" required><span id="error4">*</span><br>
+            <input type="text" id="creditcardno" name="CreditCardNo" required><span id="error4"> * </span><br>
 			<label for="creditcardamount" id="fifthLabel">Amount in Card: </label>
-			<input type="text" id="creditcardamount" name="Amount" required><span id="error5">*</span><br>
-			<input id="add" type="button" value="Add Account">
+			<input type="text" id="creditcardamount" name="Amount" required><span id="error5"> * </span><br>
 			<input type="reset" id="clearEntries" value="Clear Entries">
+			<input id="add" type="button" value="Add Account">
 		</form><br>
 	</main>
 	
