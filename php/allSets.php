@@ -20,11 +20,11 @@
 	</head>
 
 	<body>
-		<header>
+		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
 			<?php if (isset($_SESSION['user'])) { ?>
-			<a href="logout.php"><span class="login"> Log out </span></a>		
-			<span id="welcome"> <?php echo $_SESSION['user'];?> </span> 
+			<a href="logout.php"><span class="logged"> Log out </span></a>		
+			<span id="welcome"> Welcome, <?php echo $_SESSION['user'];?>! </span> 
 			<?php } else { ?>
 				<a href="addForm.php"><span class="login"> Register </span></a>
 				<a href="loginForm.php"><span class="login"> Log in | </span></a>		
