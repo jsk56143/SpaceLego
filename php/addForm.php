@@ -42,6 +42,9 @@
 
 	<main>
 		<h2 id="loginText">Add Account</h2>
+		<?php if (!empty($created)) { ?>
+			<b> <p style="margin-left: 25px"><?php echo htmlspecialchars($created);?></p> <b>
+		<?php } ?>
 		<form name="accountCreationForm" action="addAccount.php" method="post">
 			<label for="username" id="firstLabel">UserName:</label>
 			<input type="text" id="username" name="UserName" required><span id="error1"> * </span><br>
