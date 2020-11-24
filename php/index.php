@@ -57,7 +57,7 @@
 			sell 5 different lego sets, which you can see in the "Sets" tab. If you have any questions, please
 			refer to the FAQ first before reaching out to us in the "Contact Us" tab. Enjoy!</blockquote>
 			
-			<h2>Free Merch - Space Lego HD Wallpapers</h2>
+			<h2><a href="freeMerch.php">Free Merch</a> - Space Lego HD Wallpapers</h2>
 			
 			<h2>Enjoy the Lego Space Mini Movie Part 1</h2>			
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/Smgm5KPYN6Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
