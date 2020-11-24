@@ -29,8 +29,8 @@
 		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
 			<?php if (isset($_SESSION['user'])) { ?>
-			<a href="logout.php"><span class="login"> Log out </span></a>		
-			<span id="welcome"> <?php echo $_SESSION['user'];?> </span> 
+			<a href="logout.php"><span class="logged"> Log out </span></a>		
+			<span id="welcome"> Welcome, <?php echo $_SESSION['user'];?>! </span> 
 			<?php } else { ?>
 				<a href="addForm.php"><span class="login"> Register </span></a>
 				<a href="loginForm.php"><span class="login"> Log in | </span></a>		
@@ -60,17 +60,17 @@
 		</nav>
 
 		<main id="faqmain">
-			<h1>Username:</h1>
-			<h2> <?php echo $_SESSION['user'];?></h2>
-			<h1>Your Credit Card Number:</h1>
-			<h2> <?php echo $cardNumber;?></h2>
-			<h1>Your amount:</h1>
-			<h2>$<?php echo $amount;?></h2>
-			<h1>Add Funds:</h1>
+			<h1 class="accounth1">Username:</h1>
+			<h2 class="accounth2"> <?php echo $_SESSION['user'];?></h2>
+			<h1 class="accounth1">Your Credit Card Number:</h1>
+			<h2 class="accounth2"> <?php echo $cardNumber;?></h2>
+			<h1 class="accounth1">Your Amount:</h1>
+			<h2 class="accounth2">$<?php echo $amount;?></h2>
+			<h1 class="accounth1">Add Funds:</h1>
 			<form name="addFundForm" action='addFunds.php' method="post">				
-				<label for="username" id="firstLabel">UserName:</label>
+				<label for="username" id="accountLabel1">UserName:</label>
 				<input type="text" id="username" name="addUserInput"><span id="error1">*</span><br>
-				<label for="fund" id="secondLabel">Amount of Fund to Add:</label>
+				<label for="fund" id="accountLabel2">Amount of Fund to Add:</label>
 				<input type="text" id="fund" name="addFundInput"><span id="error2">*</span><br>
 				<input type="button" id="addFundButton" name="addFundButton" value="Add Funds">
 			</form>
