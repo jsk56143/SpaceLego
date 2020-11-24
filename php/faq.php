@@ -58,7 +58,7 @@
 				<b>A:</b> Refund is possible only if the product being returned is in mint condition (No signs of damage or missing pieces). <br> Simply seal 
 				the product as well as possible and we will refund your product. <br> However, you are unable to return a product <b>7 days</b> after receiving the product.
 				</li>
-				<h2>Q: I did not give my address when pruchasing my product, so how do you guys know where I live?</h2>
+				<h2>Q: I did not give my address when purchasing my product, so how do you guys know where I live?</h2>
 				<li>
 				<b>A:</b> According to Einstein, there is a saying that <b>"The important thing is not to stop questioning."</b> <br> However, there are some questions that should never
 				be asked for the greater good. <br> This is one of those questions so please refrain from thinking more into it.
