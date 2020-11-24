@@ -1,8 +1,9 @@
 <?php
 	include('accountDatabase.php');
-	$user=(isset($_POST['addUserInput']) ? $_POST['addUserInput'] : '');
+	session_start();
+	$userID = $_SESSION['id'];
 	$fund=(isset($_POST['addFundInput']) ? $_POST['addFundInput'] : '');
-	$update="UPDATE account SET Amount = Amount + '$fund' WHERE UserName = '$user'";
+	$update="UPDATE account SET Amount = Amount + '$fund' WHERE ID = '$userID'";
 	$db->exec($update);
 	
 	header('Location: accountPage.php');
