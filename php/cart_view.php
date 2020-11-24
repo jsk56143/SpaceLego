@@ -83,6 +83,12 @@
 							</a>
 						</td>
 						<td> <?php echo $product['Price']; ?> </td>
+						<td>
+							<form action='removeItem.php' method="post">
+								<input type="hidden" name="hiddenRemoveItem" value="<?php echo $product['ID']; ?>">
+								<input type="submit" name="submit" value="Remove item">
+							</form>
+						</td>
 					</tr>		
 					<?php endforeach; ?>
 				</tbody>
