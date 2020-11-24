@@ -11,6 +11,11 @@
 	$statement->execute();
 	$allProducts = $statement->fetchAll();
 	$statement->closeCursor();
+	$getTotal = "SELECT SUM(product.Price) AS Sum FROM cart INNER JOIN product ON cart.productID = product.ID WHERE UserID = '$userID'";
+	$newStatement = $db->prepare($getTotal);
+	$newStatement->execute();
+	$total = $newStatement->fetchAll();
+	
 ?>
 
 <!DOCTYPE html>
@@ -61,25 +66,39 @@
 		<main id="productList">
 		<h1>My Cart</h1>
 			<table>
-				<tr>
-					<th id="productLabel"> Product </th>
-					<th></th>
-					<th id="priceLabel"> Price </th>
-					<th></th>
-				</tr>
-				<?php foreach ($allProducts as $product) : ?>
-				<tr>
-					<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
-					<td> <a id="prodName" href="?id=<?php echo $product['ID']; ?>">
-							<?php echo $product['Name']; ?>
-						</a>
-					</td>
-					<td> $<?php echo $product['Price']; ?> </td>
-				</tr>		
-				<?php endforeach; ?>
+				<thead>
+					<tr>
+						<th id="productLabel"> Product </th>
+						<th></th>
+						<th id="priceLabel"> Price </th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach ($allProducts as $product) : ?>
+					<tr>
+						<td> <img class="productImg" src="<?php echo $product['Image']; ?>"> </td>
+						<td> <a id="prodName" href="?id=<?php echo $product['ID']; ?>">
+								<?php echo $product['Name']; ?>
+							</a>
+						</td>
+						<td> <?php echo $product['Price']; ?> </td>
+					</tr>		
+					<?php endforeach; ?>
+				</tbody>
+				<tfoot>
+					<?php foreach ($total as $totals) : ?>
+					<tr>
+						<td id="Cart_TotalText">Total</td>
+						<td id="Cart_TotalValue">
+							<?php echo $totals['Sum']; ?>
+						</td>
+					</tr>
+					<?php endforeach; ?>
+				</tfoot>
 			</table>
 				<form action="purchased.php" method="post">						
-						<input type="submit" value="Submit">
+						<input type="submit" value="Checkout">
 				</form>
 				<form action="clearCart.php" method="post">	
 						<input type="hidden" name="submitted" value="reset">

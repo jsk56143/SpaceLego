@@ -24,6 +24,9 @@ ul {
 	line-height: 1.5;
 }
 
+/*
+* Header
+*/
 header {
 	margin-left: -24px;
 	margin-right: -24px;	
@@ -209,10 +212,6 @@ header h1{
 	text-align: center;
 }
 
-#priceLabel {
-	font-size: 140%;
-}
-
 #addCartButton{
 	padding: 5px;
 }
@@ -291,4 +290,46 @@ footer p{
 
 #productLabel {
 	font-size: 150%;
+}
+
+#priceLabel {
+	font-size: 140%;
+}
+
+#productList {
+	float: left;
+	height: 100%;
+	width: 100%;
+}
+
+#productList li {
+	list-style-type: none;
+}
+
+.productImg {
+	width: 100px;
+	height: 70px;
+	margin-top: 15px;
+	margin-left: 13px;
+}
+
+#prodName {
+	margin-left: 10px;
+	margin-right: 425px;
+	font-size: 130%;
+	text-align: center;
+}
+
+#Cart_TotalText {
+	font-size: 130%;
+	font-weight: bold;
+	text-align: center;
+	margin-left: 100px;
+}
+
+#Cart_TotalValue {
+	font-size: 130%;
+	font-weight: bold;
+	text-align: center;
+	margin-left: 1500px;
 }
