@@ -10,11 +10,14 @@ var checkCredentials = function() {
 	var email = $("email").value;
 	
 	var creditcardno = parseInt($("creditcardno").value);
-	
+
+	var creditCardAmount = parseInt($("creditcardamount").value);
+
 	var error1 = "*";
 	var error2 = "*";
 	var error3 = "*";
 	var error4 = "*";	
+	var error5 = "*";
 	
 	if (username === "") {
 		error1 = "Username must NOT be empty.";
@@ -28,11 +31,15 @@ var checkCredentials = function() {
 	if (isNaN(creditcardno) || creditcardno === "" || creditcardno.toString().length != 16) {
 		error4 = "Credit Card Number must be numeric, not empty, and have a length of 16 characters.";
 	}
+	if (isNaN(creditCardAmount) || creditCardAmount === "" || creditCardAmount <= 0) {
+		error5 = "Amount must be numeric, not empty, and be greater than zero."
+	}
 	if (username != "" && passwd != "" && email != "" && !isNaN(creditcardno) && creditcardno != "" && creditcardno.toString().length == 16) {
 		error1 = "";
 		error2 = "";
 		error3 = "";
 		error4 = "";
+		error5 = "";
 		document.accountCreationForm.submit();
 	}
 	
@@ -40,6 +47,7 @@ var checkCredentials = function() {
 	$("error2").firstChild.nodeValue = error2;
 	$("error3").firstChild.nodeValue = error3;
 	$("error4").firstChild.nodeValue = error4;
+	$("error5").firstChild.nodeValue = error5;
 }
 
 var clear = function() {
@@ -47,10 +55,12 @@ var clear = function() {
 	var error2 = "*";
 	var error3 = "*";
 	var error4 = "*";
+	var error5 = "*";
 	$("error1").firstChild.nodeValue = error1;
 	$("error2").firstChild.nodeValue = error2;
 	$("error3").firstChild.nodeValue = error3;
 	$("error4").firstChild.nodeValue = error4;
+	$("error5").firstChild.nodeValue = error5;
 }
 	
 window.onload = function() {
