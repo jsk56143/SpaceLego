@@ -16,5 +16,5 @@
 	$db->exec($query);
 	$db->exec($cardquery);
 	
-	header('Location: index.php');
+	header('Location: loginForm.php');
 ?>
