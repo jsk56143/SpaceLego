@@ -115,7 +115,7 @@
 					<input type="submit" class="clearCartButton" value="Clear Cart">
 			</form>
 			<p id="Cart_TotalValue"> <?php if (!empty($lowFunds)) { ?>
-				<p><?php echo htmlspecialchars($lowFunds);?></p> <?php } ?>
+				<p id="insufficient"><?php echo htmlspecialchars($lowFunds);?></p> <?php } ?>
 			</p>
 		</main>
 		
