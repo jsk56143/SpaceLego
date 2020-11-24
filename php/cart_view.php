@@ -117,13 +117,17 @@
 					<?php endforeach; ?>
 				</tfoot>
 			</table>
-				<form action="purchased.php" method="post">						
+				<form action="checkBalance.php" method="post">						
 						<input type="submit" value="Checkout">
 				</form>
 				<form action="clearCart.php" method="post">	
 						<input type="hidden" name="submitted" value="reset">
 						<input type="submit" value="Clear Cart">
 				</form>
+				<p id="Cart_TotalValue"> <?php if (!empty($lowFunds)) { ?>
+					<p><?php echo htmlspecialchars($lowFunds);?></p>
+				<?php } ?>
+				</p>
 		</main>
 		
 		<footer> 
