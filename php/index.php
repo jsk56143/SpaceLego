@@ -15,8 +15,8 @@
 		<header> 
 			<a href="index.php"><img id = "logo" src="../res/logo.png" alt="Shop Logo"></a>
 			<?php if (isset($_SESSION['user'])) { ?>
-			<a href="logout.php"><span class="login"> Log out </span></a>		
-			<span id="welcome"> <?php echo $_SESSION['user'];?> </span> 
+			<a href="logout.php"><span class="logged"> Log out </span></a>		
+			<span id="welcome"> Welcome, <?php echo $_SESSION['user'];?>! </span> 
 			<?php } else { ?>
 				<a href="addForm.php"><span class="login"> Register </span></a>
 				<a href="loginForm.php"><span class="login"> Log in | </span></a>		
@@ -46,9 +46,9 @@
 		</nav>
 
 		<main>
-			<h1>Welcome to Space Lego!</h1>
-			<h3>Your one-stop shop for everything LEGO Space related</h3>
-			<h2>Who are we</h2>
+			<h1 class="centerText">Welcome to Space Lego!</h1>
+			<h3 class="centerText">Your one-stop shop for everything LEGO Space related</h3>
+			<h2 class="centerText">Who are we?</h2>
 			<blockquote>We are Space Lego, an ecommerce business specializing in Space Lego sets. Our business
 			was founded in November 1, 2020 with a goal of improving accessibility of purchasing old
 			Lego Space themed sets. Like many of you reading this, our childhood was mainly based on
@@ -57,12 +57,12 @@
 			sell 5 different lego sets, which you can see in the "Sets" tab. If you have any questions, please
 			refer to the FAQ first before reaching out to us in the "Contact Us" tab. Enjoy!</blockquote>
 			
-			<h2><a href="freeMerch.php">Free Merch</a> - Space Lego HD Wallpapers</h2>
+			<h2 class="centerText"><a href="freeMerch.php">Free Merch</a> - Space Lego HD Wallpapers</h2>
 			
-			<h2>Enjoy the Lego Space Mini Movie Part 1</h2>			
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/Smgm5KPYN6Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<h2>Enjoy the Lego Space Mini Movie Part 2</h2>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/vxlWH4sX0xs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<h2 class="centerText">Enjoy the Lego Space Mini Movie Part 1</h2>			
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Smgm5KPYN6Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="centerVideo"></iframe>
+			<h2 class="centerText">Enjoy the Lego Space Mini Movie Part 2</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/vxlWH4sX0xs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="centerVideo"></iframe>
 		
 		</main>
 		<footer> 
