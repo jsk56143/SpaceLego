@@ -22,6 +22,7 @@
 		<link rel="shortcut icon" href="../res/favicon.ico">
 		<link rel="normal" href="../styles/normalize.css">
 		<link rel="stylesheet" href="../styles/stylesheet.css?v=<?php echo time();?>">
+		<script type="text/javascript" src="../JS/addFunds.js"></script>
 	</head>
 
 	<body>
@@ -65,6 +66,14 @@
 			<h2> <?php echo $cardNumber;?></h2>
 			<h1>Your amount:</h1>
 			<h2>$<?php echo $amount;?></h2>
+			<h1>Add Funds:</h1>
+			<form name="addFundForm" action='addFunds.php' method="post">				
+				<label for="username" id="firstLabel">UserName:</label>
+				<input type="text" id="username" name="addUserInput"><span id="error1">*</span><br>
+				<label for="fund" id="secondLabel">Amount of Fund to Add:</label>
+				<input type="text" id="fund" name="addFundInput"><span id="error2">*</span><br>
+				<input type="button" id="addFundButton" name="addFundButton" value="Add Funds">
+			</form>
 		</main>
 		<footer> 
 			<p> &copy; 2020 Space Lego™ </p>
