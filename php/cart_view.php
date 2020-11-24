@@ -15,6 +15,14 @@
 	$newStatement = $db->prepare($getTotal);
 	$newStatement->execute();
 	$total = $newStatement->fetchAll();
+	$newStatement->closeCursor();
+	
+	$query="SELECT * FROM account WHERE ID = '$userID'";
+    $statement2 = $db->prepare($query);
+	$statement2->execute();
+	$userAmount = $statement2->fetch();
+	$amount = $userAmount['Amount'];
+	$statement2->closeCursor();
 	
 ?>
 
@@ -93,6 +101,12 @@
 					<?php endforeach; ?>
 				</tbody>
 				<tfoot>
+					<tr>
+						<td id="Cart_TotalText">Account Amount</td>
+						<td id="Cart_TotalValue">
+							<?php echo $amount; ?>
+						</td>
+					</tr>
 					<?php foreach ($total as $totals) : ?>
 					<tr>
 						<td id="Cart_TotalText">Total</td>
