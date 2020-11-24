@@ -43,15 +43,15 @@
 		</nav>
 
 	<main>
-		<h2>Login</h2>
+		<h2 id="loginText">Login</h2>
 		<?php if (!empty($status)) { ?>
 			<p><?php echo htmlspecialchars($status);?></p>
 		<?php } ?>
 		<form name="loginForm" action="loginAccount.php" method="post">
-			<label for="username" id="firstLabel">UserName:</label>
-			<input type="text" id="username" name="UserName" required><span id="error1">*</span><br>
-			<label for="passwd" id="secondLabel">Password:</label>
-			<input type="text" id="passwd" name="Password" required><span id="error2">*</span><br>
+			<label for="username" id="loginLabel1">UserName:</label>
+			<input type="text" id="username" name="UserName" required><span id="error1"> * </span><br>
+			<label for="passwd" id="loginLabel2">Password:</label>
+			<input type="text" id="passwd" name="Password" required><span id="error2"> * </span><br>
 			<input id="loginButton" type="submit" value="Login">		
 		</form><br>
 	</main>
